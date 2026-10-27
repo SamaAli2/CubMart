@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CubMart</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍</text></svg>">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#home">🛍 CubMart</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#electronics">Electronics</a></li>
+            <li><a class="dropdown-item" href="#fashion">Fashion</a></li>
+            <li><a class="dropdown-item" href="#home-living">Home &amp; Living</a></li>
+            <li><a class="dropdown-item" href="#accessories">Accessories</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#deals">Deals</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="container">
+    <h1 class="hero-title">Everything You Need,<br>All In One Place.</h1>
+    <p class="hero-subtitle mt-3">Discover electronics, fashion, home &amp; living products, and accessories at unbeatable prices.</p>
+    <div class="mt-4">
+      <a href="#products" class="btn btn-custom me-2">Browse Products</a>
+      <button class="btn btn-light btn-lg" onclick="startOrdering()">🛒 Start Ordering</button>
+    </div>
+    <div class="hero-arrow">↓</div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container">
+    <h2 class="section-title">Why Shop With Us</h2>
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6">
+        <div class="feature-card">
+          <i class="bi bi-truck"></i>
+          <h4 class="mt-3">Fast Delivery</h4>
+          <p>Get your order delivered quickly and safely to your doorstep.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="feature-card">
+          <i class="bi bi-shield-lock"></i>
+          <h4 class="mt-3">Secure Checkout</h4>
+          <p>Shop with confidence using our secure payment system.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="feature-card">
+          <i class="bi bi-patch-check"></i>
+          <h4 class="mt-3">Quality Guaranteed</h4>
+          <p>Every product is carefully selected to ensure the best quality.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="feature-card">
+          <i class="bi bi-chat-dots"></i>
+          <h4 class="mt-3">24/7 Support</h4>
+          <p>Our support team is always ready to help you anytime.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="category-strip">
+  <div class="container">
+    <h2 class="section-title text-white">Shop by Category</h2>
+    <div class="category-pills d-flex flex-nowrap justify-content-center gap-3 overflow-auto py-3">
+      <a href="#electronics"><i class="bi bi-phone"></i> Electronics</a>
+      <a href="#fashion"><i class="bi bi-bag"></i> Fashion</a>
+      <a href="#home-living"><i class="bi bi-house"></i> Home &amp; Living</a>
+      <a href="#accessories"><i class="bi bi-smartwatch"></i> Accessories</a>
+      <a href="#deals"><i class="bi bi-tags"></i> Sale</a>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light" id="products">
+  <div class="container">
+    <h2 class="section-title">Featured Products</h2>
+
+    <h3 id="electronics" class="category-heading mb-4">📱 Electronics</h3>
+    <div class="product-grid">
+      <div class="product-card">
+        <span class="badge badge-new position-absolute m-2">New</span>
+        <img src="images/headphones.png" alt="Wireless Headphones">
+        <div class="p-3">
+          <a href="#spotlight-headphones"><h5>Wireless Headphones</h5></a>
+          <p class="price">450 EGP</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <span class="badge badge-sale position-absolute m-2">Best Seller</span>
+        <img src="images/watch.png" alt="Smart Watch">
+        <div class="p-3">
+          <a href="#spotlight-watch"><h5>Smart Watch</h5></a>
+          <p class="price">950 EGP</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <span class="badge badge-sale position-absolute m-2">Sale -20%</span>
+        <img src="images/speaker.png" alt="Bluetooth Speaker">
+        <div class="p-3">
+          <a href="#spotlight-speaker"><h5>Bluetooth Speaker</h5></a>
+          <p class="price">380 EGP</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 id="fashion" class="category-heading mb-4 mt-5">👕 Fashion</h3>
+    <div class="product-grid">
+      <div class="product-card">
+        <span class="badge badge-new position-absolute m-2">New</span>
+        <img src="images/jacket.png" alt="Denim Jacket">
+        <div class="p-3">
+          <a href="#spotlight-jacket"><h5>Denim Jacket</h5></a>
+          <p class="price">600 EGP</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <span class="badge badge-sale position-absolute m-2">Sale -20%</span>
+        <img src="images/shoes.png" alt="Sneakers">
+        <div class="p-3">
+          <a href="#spotlight-shoes"><h5>Sneakers</h5></a>
+          <p class="price">520 EGP</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <span class="badge badge-new position-absolute m-2">Best Seller</span>
+        <img src="images/backpack.png" alt="Leather Backpack">
+        <div class="p-3">
+          <a href="#spotlight-backpack"><h5>Leather Backpack</h5></a>
+          <p class="price">750 EGP</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 id="home-living" class="category-heading mb-4 mt-5">🏠 Home &amp; Living</h3>
+    <div class="product-grid">
+      <div class="product-card">
+        <span class="badge badge-new position-absolute m-2">New</span>
+        <img src="images/mug.png" alt="Mug Set">
+        <div class="p-3">
+          <a href="#spotlight-mug"><h5>Mug Set</h5></a>
+          <p class="price">220 EGP</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <span class="badge badge-sale position-absolute m-2">Best Seller</span>
+        <img src="images/blanket.png" alt="Throw Blanket">
+        <div class="p-3">
+          <a href="#spotlight-blanket"><h5>Throw Blanket</h5></a>
+          <p class="price">340 EGP</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <span class="badge badge-sale position-absolute m-2">Sale</span>
+        <img src="images/candle.png" alt="Candle Trio">
+        <div class="p-3">
+          <a href="#spotlight-candle"><h5>Candle Trio</h5></a>
+          <p class="price">180 EGP</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 id="accessories" class="category-heading mb-4 mt-5"> Accessories</h3>
+    <div class="product-grid">
+      <div class="product-card">
+        <span class="badge badge-new position-absolute m-2">New</span>
+        <img src="images/gold-watch.png" alt="Gold Watch">
+        <div class="p-3">
+          <a href="#spotlight-gold-watch"><h5>Gold Watch</h5></a>
+          <p class="price">1,200 EGP</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <span class="badge badge-sale position-absolute m-2">Best Seller</span>
+        <img src="images/sunglasses.png" alt="Designer Sunglasses">
+        <div class="p-3">
+          <a href="#spotlight-sunglasses"><h5>Designer Sunglasses</h5></a>
+          <p class="price">450 EGP</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <span class="badge badge-sale position-absolute m-2">Sale -15%</span>
+        <img src="images/wallet.png" alt="Leather Wallet">
+        <div class="p-3">
+          <a href="#spotlight-wallet"><h5>Leather Wallet</h5></a>
+          <p class="price">380 EGP</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section text-center text-white" id="deals" style="background:linear-gradient(135deg,#ff6b35,#f7931e)">
+  <h2>🔥 Mega Sale</h2>
+  <h1 style="font-size:4rem;font-weight:bold">UP TO 50% OFF</h1>
+  <div class="mt-4">
+    <h3>🎫 Promo Codes</h3>
+    <p class="lead">Use code <strong>CUB10</strong> for extra 50 EGP off</p>
+    <p class="lead">Use code <strong>MEGA20</strong> for extra 100 EGP off</p>
+    <p class="lead">Use code <strong>SAVE15</strong> for extra 75 EGP off</p>
+  </div>
+  <button class="btn btn-dark btn-lg mt-3" onclick="startOrdering()">🛒 Start Ordering</button>
+</section>
+
+<section class="section bg-light" id="spotlight">
+  <div class="container">
+    <h2 class="section-title">Product Spotlight</h2>
+
+    <div class="row align-items-center mb-5 spotlight-block" id="spotlight-headphones">
+      <div class="col-md-6">
+        <img src="images/headphones.png" class="w-100 rounded shadow" alt="Wireless Headphones">
+      </div>
+      <div class="col-md-6">
+        <small class="text-warning fw-bold">🎧 FEATURED</small>
+        <h2 class="mt-2">Wireless Headphones</h2>
+        <p class="lead">Soft, over-ear cushions and a battery that lasts all day. Premium sound quality with active noise cancellation.</p>
+        <h3 class="price">450 EGP</h3>
+      </div>
+    </div>
+
+    <div class="row align-items-center mb-5 flex-md-row-reverse spotlight-block" id="spotlight-watch">
+      <div class="col-md-6">
+        <img src="images/watch.png" class="w-100 rounded shadow" alt="Smart Watch">
+      </div>
+      <div class="col-md-6">
+        <small class="text-warning fw-bold">⌚ BEST SELLER</small>
+        <h2 class="mt-2">Smart Watch</h2>
+        <p class="lead">Track your fitness goals and stay connected with notifications. Water-resistant with a 7-day battery life.</p>
+        <h3 class="price">950 EGP</h3>
+      </div>
+    </div>
+
+    <div class="row align-items-center mb-5 spotlight-block" id="spotlight-speaker">
+      <div class="col-md-6">
+        <img src="images/speaker.png" class="w-100 rounded shadow" alt="Bluetooth Speaker">
+      </div>
+      <div class="col-md-6">
+        <small class="text-warning fw-bold">🔊 SALE -20%</small>
+        <h2 class="mt-2">Bluetooth Speaker</h2>
+        <p class="lead">Portable wireless speaker with 360-degree sound. Perfect for outdoor adventures and parties.</p>
+        <h3 class="price">380 EGP</h3>
+      </div>
+    </div>
+
+    <div class="row align-items-center mb-5 flex-md-row-reverse spotlight-block" id="spotlight-jacket">
+      <div class="col-md-6">
+        <img src="images/jacket.png" class="w-100 rounded shadow" alt="Denim Jacket">
+      </div>
+      <div class="col-md-6">
+        <small class="text-warning fw-bold">🧥 NEW ARRIVAL</small>
+        <h2 class="mt-2">Denim Jacket</h2>
+        <p class="lead">Classic blue denim jacket with button front and chest pockets. Timeless style for any occasion.</p>
+        <h3 class="price">600 EGP</h3>
+      </div>
+    </div>
+
+    <div class="row align-items-center mb-5 spotlight-block" id="spotlight-shoes">
+      <div class="col-md-6">
+        <img src="images/shoes.png" class="w-100 rounded shadow" alt="Sneakers">
+      </div>
+      <div class="col-md-6">
+        <small class="text-warning fw-bold">👟 SALE -20%</small>
+        <h2 class="mt-2">Sneakers</h2>
+        <p class="lead">Comfortable athletic running shoes with cushioned sole. Perfect for sports and daily wear.</p>
+        <h3 class="price">520 EGP</h3>
+      </div>
+    </div>
+
+    <div class="row align-items-center mb-5 flex-md-row-reverse spotlight-block" id="spotlight-backpack">
+      <div class="col-md-6">
+        <img src="images/backpack.png" class="w-100 rounded shadow" alt="Leather Backpack">
+      </div>
+      <div class="col-md-6">
+        <small class="text-warning fw-bold">🎒 BEST SELLER</small>
+        <h2 class="mt-2">Leather Backpack</h2>
+        <p class="lead">Premium brown leather backpack with multiple compartments and padded laptop sleeve. Crafted for durability.</p>
+        <h3 class="price">750 EGP</h3>
+      </div>
+    </div>
+
+    <div class="row align-items-center mb-5 spotlight-block" id="spotlight-mug">
+      <div class="col-md-6">
+        <img src="images/mug.png" class="w-100 rounded shadow" alt="Mug Set">
+      </div>
+      <div class="col-md-6">
+        <small class="text-warning fw-bold">☕ NEW</small>
+        <h2 class="mt-2">Mug Set</h2>
+        <p class="lead">Elegant ceramic mug set, perfect for your morning coffee or tea. Minimalist design for any kitchen.</p>
+        <h3 class="price">220 EGP</h3>
+      </div>
+    </div>
+
+    <div class="row align-items-center mb-5 flex-md-row-reverse spotlight-block" id="spotlight-blanket">
+      <div class="col-md-6">
+        <img src="images/blanket.png" class="w-100 rounded shadow" alt="Throw Blanket">
+      </div>
+      <div class="col-md-6">
+        <small class="text-warning fw-bold">🛋️ BEST SELLER</small>
+        <h2 class="mt-2">Throw Blanket</h2>
+        <p class="lead">Super cozy and soft to the touch. Perfect for chilly evenings and movie nights at home.</p>
+        <h3 class="price">340 EGP</h3>
+      </div>
+    </div>
+
+    <div class="row align-items-center mb-5 spotlight-block" id="spotlight-candle">
+      <div class="col-md-6">
+        <img src="images/candle.png" class="w-100 rounded shadow" alt="Candle Trio">
+      </div>
+      <div class="col-md-6">
+        <small class="text-warning fw-bold">️ SALE</small>
+        <h2 class="mt-2">Candle Trio</h2>
+        <p class="lead">Three scented candles in elegant glass jars. Create a relaxing atmosphere in any room.</p>
+        <h3 class="price">180 EGP</h3>
+      </div>
+    </div>
+
+    <div class="row align-items-center mb-5 flex-md-row-reverse spotlight-block" id="spotlight-gold-watch">
+      <div class="col-md-6">
+        <img src="images/gold-watch.png" class="w-100 rounded shadow" alt="Gold Watch">
+      </div>
+      <div class="col-md-6">
+        <small class="text-warning fw-bold">⌚ NEW ARRIVAL</small>
+        <h2 class="mt-2">Gold Watch</h2>
+        <p class="lead">Elegant gold watch with leather strap and classic luxury design. Perfect for formal occasions.</p>
+        <h3 class="price">1,200 EGP</h3>
+      </div>
+    </div>
+
+    <div class="row align-items-center mb-5 spotlight-block" id="spotlight-sunglasses">
+      <div class="col-md-6">
+        <img src="images/sunglasses.png" class="w-100 rounded shadow" alt="Designer Sunglasses">
+      </div>
+      <div class="col-md-6">
+        <small class="text-warning fw-bold">️ BEST SELLER</small>
+        <h2 class="mt-2">Designer Sunglasses</h2>
+        <p class="lead">Modern aviator sunglasses with UV protection and sleek black frame. Stylish and functional.</p>
+        <h3 class="price">450 EGP</h3>
+      </div>
+    </div>
+
+    <div class="row align-items-center mb-5 flex-md-row-reverse spotlight-block" id="spotlight-wallet">
+      <div class="col-md-6">
+        <img src="images/wallet.png" class="w-100 rounded shadow" alt="Leather Wallet">
+      </div>
+      <div class="col-md-6">
+        <small class="text-warning fw-bold">👛 SALE -15%</small>
+        <h2 class="mt-2">Leather Wallet</h2>
+        <p class="lead">Premium brown leather bifold wallet with multiple card slots. Compact and durable design.</p>
+        <h3 class="price">380 EGP</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="reviews">
+  <div class="container">
+    <h2 class="section-title">Customer Reviews</h2>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="review-card">
+          <h5 class="text-warning">★★★★★</h5>
+          <p>"The headphones arrived in two days and sound amazing."</p>
+          <h6>- Lina M.</h6>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="review-card">
+          <h5 class="text-warning">★★★★★</h5>
+          <p>"My backpack feels premium, honestly a steal for the price."</p>
+          <h6>- Omar K.</h6>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="review-card">
+          <h5 class="text-warning">★★★★☆</h5>
+          <p>"Loved the blanket, super cozy. Support team answered fast."</p>
+          <h6>- Sara A.</h6>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <button class="btn btn-custom btn-lg" onclick="submitReview()">⭐ Add Your Review</button>
+    </div>
+  </div>
+</section>
+
+<section class="section newsletter-section" id="newsletter">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="form-section newsletter-box">
+          <form onsubmit="event.preventDefault(); alert('✅ Subscribed successfully!'); this.reset();">
+            <fieldset>
+              <legend> Newsletter</legend>
+              <p class="mb-3">Subscribe to get exclusive offers and updates.</p>
+              <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Enter your email" required>
+              </div>
+              <button type="submit" class="btn btn-custom w-100">Subscribe</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light" id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="form-section">
+          <form onsubmit="event.preventDefault(); alert('✅ Thank you! Your message has been sent.'); this.reset();">
+            <fieldset>
+              <legend>📨 Send us a Message</legend>
+              <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullName" placeholder="Your full name" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Your message..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-custom w-100">Send Message</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-3 col-sm-6">
+        <h5>CubMart</h5>
+        <p>A friendly little store for everyday things.</p>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <h5>Quick Links</h5>
+        <p><a href="#home">Home</a></p>
+        <p><a href="#products">Shop</a></p>
+        <p><a href="#about">About</a></p>
+        <p><a href="#contact">Contact</a></p>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <h5>Categories</h5>
+        <p><a href="#electronics">Electronics</a></p>
+        <p><a href="#fashion">Fashion</a></p>
+        <p><a href="#home-living">Home &amp; Living</a></p>
+        <p><a href="#accessories">Accessories</a></p>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <h5>Get In Touch</h5>
+        <p>✉️ hello@cubmart.example</p>
+        <p>📱 +20 100 000 0000</p>
+        <p>📍 Cairo, Egypt</p>
+      </div>
+    </div>
+    <hr style="border-color:#444; margin: 30px 0 15px;">
+    <p class="text-center mb-0">&copy; 2026 CubMart. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
